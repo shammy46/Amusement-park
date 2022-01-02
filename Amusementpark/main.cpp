@@ -2,7 +2,6 @@
 #include<windows.h>
 #include <GL/glut.h>
 
-
 #define PI 3.1416
 
 using namespace std;
@@ -78,7 +77,7 @@ void hillSide()
 
     glPushMatrix();
     glTranslated(8.5,0.0,1);
-    glColor3f(0.0,1.0,0);
+    glColor3f(0.0f, 0.5f, 0.5f);
     glTranslatef(0,5,0);
     halfcircle(15,7);
     glPopMatrix();
@@ -301,7 +300,6 @@ void cloudLeft()
     {
         cloudleftx=40;
     }
-    //printf("%f\n",cloudleftx);
 
     glPushMatrix();
     glTranslated(-20+cloudleftx,8.5,1);
@@ -381,7 +379,6 @@ void cloudRight()
     {
         cloudrightx=2;
     }
-    //printf("%f\n",cloudrightx);
 
     glPushMatrix();
     glTranslated(12+cloudrightx,16,1);
@@ -423,7 +420,7 @@ void cloudMiddle()
     {
         cloudmiddlex=30;
     }
-    //printf("%f\n",cloudmiddlex);
+
     glPushMatrix();
     glTranslated(-3.5+cloudmiddlex,16,1);
     glScaled(0.5,0.2,1);
@@ -489,12 +486,12 @@ void babySwing()
         }
         else if(dolnay>0.1 && dolnay <1)
         {
-            //glTranslated(-14,0.65+dolnay,0);
+
             glTranslated(0,-0.29+dolnay,0);
             glTranslated(-14,1,0);
             glScaled(0.05,0.05,0);
             countdolna++;
-            //printf("hi");
+
         }
 
         else if(dolnay<-0.1 && dolnay >-1)
@@ -503,12 +500,9 @@ void babySwing()
             glScaled(0.05,0.05,0);
         }
 
-
-
-
         glPushMatrix();   //jama top
         glRotated(-20,0,1,0);
-        glColor3f(1,0,0);
+        glColor3f(0.5f, 1.0f, 1.0f);
         glBegin(GL_POLYGON);
         glVertex2d(-6,-6);
         glVertex2d(-11,-9);
@@ -754,24 +748,14 @@ void swing()
     glEnd();
     glPopMatrix();
 
-    //glPopMatrix();
-
-
-
-
 
     glPopMatrix();
     babySwing();
-
-
-
 }
 
 void wheerligig()
 {
     glPushMatrix();
-    //glTranslated(-70,20,0);
-    //glScaled(2,2,0);
 
     glPushMatrix();  //stand
     glTranslated(13,-5,1);
@@ -842,7 +826,7 @@ void wheerligig()
     glVertex2d(0,-3);
     glEnd();
     glPushMatrix();
-    //glScaled(1.5,1.5,0);
+
     glBegin(GL_QUADS);
     glColor3f(0.545,0,0);
     glVertex2d(-1.5,-2.5);
@@ -969,8 +953,7 @@ void wheerligig()
     glPopMatrix();
 
     glPushMatrix();
-    //glTranslatef(55.5,-20,0);
-    //glRotated(45,0,0,1);
+
     glColor3f(1,0,0);
     glBegin(GL_LINES);
 
@@ -996,8 +979,6 @@ void wheerligig()
 
     glPopMatrix();
     glPopMatrix();
-    //printf("angle:%f\n",angle);
-    // glPopMatrix();
 
 }
 
@@ -1006,7 +987,7 @@ void bench()
     glPushMatrix();
     glTranslated(-8,-3,1);
     glColor3f(0,0,1);
-    //glRotated(25,0,1,1);
+
     glScaled(0.8,0.6,1);
     glPushMatrix(); //Brench
     glTranslated(1.8,3,1);
@@ -1058,7 +1039,7 @@ void bench()
         glTranslated(-4,0.5,0);
         glScaled(0.05,0.06,0);
         glPushMatrix();   //jama top
-        glColor3f(1,0,0);
+        glColor3f(0.5f, 1.0f, 1.0f);
         glBegin(GL_POLYGON);
         glVertex2d(-6,-6);
         glVertex2d(-11,-9);
@@ -1113,7 +1094,7 @@ void bench()
 
 
         glPushMatrix();     //skirt
-        glColor3f(0,0,1);
+        glColor3f(0.0f, 0.0f, 0.0f);
         glBegin(GL_QUADS);
         glVertex2d(-6,-22);
         glVertex2d(6,-22);
@@ -1221,7 +1202,7 @@ void baby()
     glPushMatrix();
     if(isbaby==0)
     {
-        // printf("%f\n",by);
+
         glTranslated(0+bx,0+by,0);
         glScalef(0.05,0.07,0);
     }
@@ -1229,13 +1210,13 @@ void baby()
     else if(isbaby==5)
     {
         glTranslated(-0.5,2,0);
-        //glTranslated(0+bx,0+by,0);
+
         glScaled(0.07,0.2,0);
     }
     else if(isbaby==6)
     {
         glTranslated(0+bx,0+by,0);
-        //printf("HI");
+
         glScalef(0.04,0.06,0);
     }
 
@@ -1244,13 +1225,13 @@ void baby()
 
         glTranslated(0+shipx,3,0);
         glTranslated(0,0,0);
-        //printf("HI");
+
         glScalef(0.04,0.04,0);
     }
 
-    //glRotated(20,1,1,0);
+
     glPushMatrix();   //jama top
-    glColor3f(1,0,0);
+    glColor3f(0.5,1.0,1.0);
     glBegin(GL_POLYGON);
     glVertex2d(-6,-6);
     glVertex2d(-11,-9);
@@ -1303,7 +1284,7 @@ void baby()
 
 
     glPushMatrix();     //skirt
-    glColor3f(0,0,1);
+    glColor3f(0.0,0.0,0.0);
     glBegin(GL_QUADS);
     glVertex2d(-6,-22);
     glVertex2d(6,-22);
@@ -1414,11 +1395,11 @@ void babySlide()
 
         glTranslatef(3.5+stepx,-1.7+stepy,0);
         glScaled(0.04,0.06,0);
-        //glRotated(20,1,1,0);
+
 
         glPushMatrix();   //jama top
         glRotated(-20,0,1,0);
-        glColor3f(1,0,0);
+        glColor3f(0.5f, 1.0f, 1.0f);
         glBegin(GL_POLYGON);
         glVertex2d(-6,-6);
         glVertex2d(-11,-9);
@@ -1476,7 +1457,7 @@ void babySlide()
 
 
         glPushMatrix();     //skirt
-        glColor3f(0,0,1);
+        glColor3f(0.0f, 0.0f, 0.0f);
         glBegin(GL_QUADS);
         glVertex2d(-6,-22);
         glVertex2d(6,-22);
@@ -1583,9 +1564,9 @@ void slide()
 {
 
     glPushMatrix();
-    //glRotatef(90,1,0,0);
+
     glTranslatef(2,-3,0);
-    //glScalef(0.8,1,0);
+
     glPushMatrix();
     glTranslatef(-3,-3,0);
     glColor3f(0.54,0,0);
@@ -1656,12 +1637,12 @@ void slide()
 void glidder()
 {
     glPushMatrix();
-    //glRotatef(-15,1,0,0);
+
     glTranslated(-18.5,-6,0);
     glColor3f(0,0,0.54);
     glScalef(0.8,0.5,0);
-    //glPushMatrix(); // glidder body
-    //glRotatef(-glAngle,0,0,1);
+     // glidder body
+
     if(glUp==0)
     {
         glPushMatrix();
@@ -1731,7 +1712,7 @@ void glidder()
         glPopMatrix();
         glPushMatrix();  //glidder bottom
         glTranslated(6.2,1.0,1);
-        //glRotatef(glAngle,0,0,1);
+
         glBegin(GL_QUADS);
         glVertex2d(0.0,0.6);
         glVertex2d(0.0,-2.0);
@@ -1761,10 +1742,9 @@ void glidder()
         glScaled(0.05,0.05,0);
 
 
-        //glScalef(0.5,0.5,0);
-        //glRotated(20,1,1,0);
+
         glPushMatrix();   //jama top
-        glColor3f(1,0,0);
+        glColor3f(0.5f, 1.0f, 1.0f);
         glBegin(GL_POLYGON);
         glVertex2d(-6,-6);
         glVertex2d(-11,-9);
@@ -1795,7 +1775,7 @@ void glidder()
 
         glPushMatrix();     //left hand palm
         glTranslated(-18.5,-9,0);
-        //glRotated(-15,0,0,1);
+
         glColor3f(0.87,0.72,0.53);
         circle(3.3,2.7);
         glPopMatrix();
@@ -1819,7 +1799,7 @@ void glidder()
 
 
         glPushMatrix();     //skirt
-        glColor3f(0,0,1);
+        glColor3f(0.0f, 0.0f, 0.0f);
         glBegin(GL_QUADS);
         glVertex2d(-6,-22);
         glVertex2d(6,-22);
@@ -1933,13 +1913,13 @@ void glidder()
     }
     else if(glUp==1)
     {
-        //printf("Hi|");
+
         glRotatef(-20,1,1,1);
         glTranslated(-8.5,-6.2,0);
     }
 
     glScalef(0.05,0.05,0);
-    //glRotated(20,1,1,0);
+
     glPushMatrix();   //jama top
     glColor3f(1,0.27,0);
     glBegin(GL_POLYGON);
@@ -2154,7 +2134,6 @@ void init(void)
 void spe_key(int key, int x, int y)
 {
 
-    //printf("BX:%f---BY:%f\n",bx,by);
     switch (key)
     {
 
@@ -2164,7 +2143,6 @@ void spe_key(int key, int x, int y)
         bx=bx-0.5;
         glutPostRedisplay();
 
-        //glutPostRedisplay();
         break;
 
     case GLUT_KEY_RIGHT:
@@ -2172,21 +2150,21 @@ void spe_key(int key, int x, int y)
 
         bx=bx+0.5;
         glutPostRedisplay();
-        //glutPostRedisplay();
+
         break;
 
     case GLUT_KEY_DOWN:
 
         by=by-0.5;
         glutPostRedisplay();
-        //glutPostRedisplay();
+
         break;
 
     case GLUT_KEY_UP:
 
         by=by+0.5;
         glutPostRedisplay();
-        //glutPostRedisplay();
+
         break;
     default:
         break;
@@ -2262,7 +2240,7 @@ void normal_key(unsigned char key, int x, int y)
         dolnay=0.1;
         glutIdleFunc(dolnaMove);
         glutPostRedisplay();
-        //spinDisplay_left();
+
         break;
     case 'd':
         isbaby=0;

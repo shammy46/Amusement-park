@@ -1,12 +1,8 @@
 # depslib dependency file v1.0
-1641047286 source:c:\glut projects\amusementpark\main.cpp
+1641120348 source:c:\glut projects\amusementpark\main.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<GL/glut.h>
-	<stdlib.h>
-	<math.h>
-	<dos.h>
-	<stdio.h>
 
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\windows.h
 	<_mingw.h>
